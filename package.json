@@ -1,0 +1,65 @@
+{
+  "name": "dsh-wash",
+  "version": "0.1.2",
+  "description": "会话净化：扫描本地会话记录，剥掉被模型抄进回复里的输入信封（<user_message>/<turn_meta>），备份后重写，可一键还原。",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "author": "云楘",
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "会话净化",
+    "description": "扫描 DSH 本地会话记录，找出把 <user_message>/<turn_meta> 信封抄进助手回复的脏消息，备份后清洗，可一键还原。"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.2.2",
+    "node": ">=22.15"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    },
+    "manifestVersion": 1,
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "hygiene",
+    "context",
+    "qq"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
