@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session Wash",
+    "description": "Scan local session logs for input envelopes copied into assistant replies (<user_message>/<turn_meta>), back up, rewrite, and restore with one click."
+  },
+  "panel": "Session Wash"
+}
