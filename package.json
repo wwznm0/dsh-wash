@@ -61,5 +61,13 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwznm0/dsh-wash.git"
+  },
+  "homepage": "https://github.com/wwznm0/dsh-wash#readme",
+  "bugs": {
+    "url": "https://github.com/wwznm0/dsh-wash/issues"
   }
 }
