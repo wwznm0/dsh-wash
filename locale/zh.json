@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "会话净化",
+    "description": "扫描本地会话记录，找出被抄进助手回复的输入信封（<user_message>/<turn_meta>），备份后清洗，可一键还原。"
+  },
+  "panel": "会话净化"
+}
